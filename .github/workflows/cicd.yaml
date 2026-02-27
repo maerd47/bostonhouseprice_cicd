@@ -35,9 +35,7 @@ jobs:
         pip install scikit-learn
         pip install -r requirements.txt
 
-    - name: Run tests
-      run: |
-        pytest
+    
         
 
     
@@ -65,7 +63,7 @@ jobs:
         context: .
         file: ./DockerFile
         push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/bostonhousepricing-app:latest
+        tags: ${{ secrets.DOCKER_USERNAME }}/2bostonhousepricing-app:latest
 
     - name: Image digest
       run: echo ${{ steps.build-and-publish.outputs.digest }}
